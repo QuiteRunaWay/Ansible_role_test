@@ -1,6 +1,6 @@
 ---
 # Desired version of vector
-vector_version: 0.21.1
+vector_version: 0.21.2
 # Path to vector configs
 vector_config_dir: "{{ ansible_user_dir }}/vector_config"
 # Vector config dir
