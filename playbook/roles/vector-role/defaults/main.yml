@@ -1,23 +1,7 @@
 ---
-# defaults file for vector-role
-vector_url: https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version }}-1.x86_64.rpm
+# Desired version of vector
 vector_version: 0.21.1
+# Path to vector configs
+vector_config_dir: "{{ ansible_user_dir }}/vector_config"
+# Vector config dir
 vector_config:
-  sources:
-    our_log:
-      type: file
-      ignore_older_secs: 600
-      include:
-        - /home/vagrant/logs/*.log
-      read_from: beginning
-  sinks:
-    to_clickhouse:
-      type: clickhouse
-      inputs:
-        - our_log
-      database: custom
-      endpoint: http://51.250.101.43:8123
-      table: my_table
-      compression: gzip
-      healthcheck: false
-      skip_unknown_fields: true
