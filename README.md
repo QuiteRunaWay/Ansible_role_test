@@ -16,6 +16,12 @@
 
 Добавил дистрибутивы, получилось 3: centOS 7, CentOS 8, Ubuntu. Molecule test проходит без ошибок:
 
+![image](https://user-images.githubusercontent.com/92969676/173748354-87aea3e4-296b-49b8-95ec-85b5d38c7733.png)
+
+![image](https://user-images.githubusercontent.com/92969676/173748450-48a3c65e-6e96-442a-8867-983258a551f4.png)
+
+![image](https://user-images.githubusercontent.com/92969676/173748635-6a800324-8e7e-45cf-a220-9327115fb238.png)
+
 ![image](https://user-images.githubusercontent.com/92969676/173747542-5afe8506-181f-47fc-b768-6d56af7e6769.png)
 
 5. Добавьте несколько assert'ов в verify.yml файл для  проверки работоспособности vector-role (проверка, что конфиг валидный, проверка успешности запуска, etc). Запустите тестирование роли повторно и проверьте, что оно прошло успешно.
