@@ -76,13 +76,13 @@
 
 После выполнения у вас должно получится два сценария molecule и один tox.ini файл в репозитории. Ссылка на репозиторий являются ответами на домашнее задание. Не забудьте указать в ответе теги решений Tox и Molecule заданий.
 
-Сценарии для тестирования molecule разнес в разные директории: podman и docker. В зависимости от нужного тестирования драйвера в файле tox.ini в коменде прописываем через ключ '-s' нужный "драйвер", далее внести изменения в 'tox.ini' для нужного выбора 'requirements.txt'. В общем сделал как понял.
+Сценарии для тестирования molecule разнес в разные директории: podman и docker. В зависимости от нужного тестирования драйвера в файле tox.ini в коменде прописываем через ключ ```-s``` нужный "драйвер", далее внести изменения в ```tox.ini` для нужного выбора ```requirements.txt```. В общем сделал как понял.
 
 Для тестирования роли для docker:
-Меняем в 'tox.ini' {posargs:molecule test '''-s docker''' --destroy always}, и указываем параметр -r tox-requirements.txt.
+Меняем в ```tox.ini``` {posargs:molecule test ```-s docker``` --destroy always}, и указываем параметр ```-r tox-requirements.txt```
 
 Для тестирования роли для podman:
-Меняем в 'tox.ini' {posargs:molecule test '''-s podman''' --destroy always}, и указываем параметр -r tox1-requirements.txt.
+Меняем в ```tox.ini``` {posargs:molecule test ```-s podman``` --destroy always}, и указываем параметр ```-r tox1-requirements.txt```
 
 Оба файла ```tox-requirements.txt.``` и ```tox1-requirements.txt.``` приложил в текущей директории.
 
