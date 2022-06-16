@@ -1,0 +1,14 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: That config Validate
+    assert: 
+      that:
+        ansible.builtin.command: vector validate --no-environment --config-yaml /etc/vector/vector.yml
+        register: result
+        success_msg: "Config validate!"
+        fail_msg: "'rc == 0' in result.stdout"

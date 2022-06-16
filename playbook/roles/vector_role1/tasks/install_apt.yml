@@ -8,7 +8,7 @@
     architecture_name: undefined
   when: ansible_architecture != 'x86_64'
 - name: Install Vector | DEB install
-  become: false
+  become: true
   ansible.builtin.apt:
     deb: https://packages.timber.io/vector/{{ vector_version }}/vector_{{ vector_version }}-1_{{ architecture_name }}.deb
     state: present

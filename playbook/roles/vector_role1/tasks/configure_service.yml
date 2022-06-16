@@ -1,6 +1,6 @@
 ---
 - name: Configure Service | Template systemd unit
-  become: false
+  become: true
   ansible.builtin.template:
     src: vector.service.j2
     dest: /etc/systemd/system/vector.service
